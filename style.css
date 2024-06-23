@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: var(--primecolor);
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+* {margin: 0;}
+
+    body{
+    background-color: var(--background);
+    color: var(--fontcolor);
+    caret-color: transparent;
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --background: rgb(12 11 30);
+    --primecolor: #0069bd;
+    --fontcolor: white;
+}
+
+/* common classes */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hcenter {
+    display: flex;
+    justify-content: center;
+}
+
+.columcenter {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: cen ter; */
+    align-items: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.left {
+    display: flex;
+    justify-content: end;
+}
+
+/* nav bar */
+
+.navbox {
+    font-size: 3vmax;
+}
+
+.menu {
+    gap: 5vmax;
+}
+
+.nav {
+    justify-content: space-between;
+    padding: 0 12vmax;
+    height: 7vmax;
+    box-sizing: border-box;
+    border-bottom: 1px solid #8080800f;
+}
+
+.name {
+    color: var(--primecolor);
+    font-weight: 800;
+}
+
+button {
+    border: none;
+    height: 3vmax;
+    width: 5vmax;
+    border-radius: 4px;
+    font-size: .35em;
+}
+
+.navbox .home {
+    background-color: var(--primecolor);
+}
+
+.navbox .two {
+    border-bottom: 2px solid var(--primecolor);
+    width: 7vmax;
+    background-color: var(--background);
+}
+
+.navbox i {
+    display: none;
+    font-size: 4vmax;
+    transition: color .5s, transform .5s;
+}
+
+
+i:hover {
+    color: #CA1B42;
+    transform: rotate(180deg);
+}
+
+.sidebar {
+    /* height: 60vh; */
+    padding: 20vw 15vw;
+    border-radius: 8px;
+    display: flex;
+    background-color: #80808047;
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    gap: 5vw;
+    align-items: center;
+
+    display: none;
+}
+
+.sidebar button {
+    height: 5vmax;
+    width: 9vmax;
+    font-size: 1.7vmax;
+}
+
+.sidebar .two {
+    width: 9vmax;
+}
+
+.sidebar.open {
+    display: flex;
+}
+
+/* 1 homepage */
+
+.font {
+    font-size: clamp(0.9em, 1.5vw, 1.4em);
+    padding-top: 3vw;
+    box-sizing: border-box;
+}
+
+.page1 img {
+    width: clamp(161px, 35vw, 347px);
+    border-radius: 179px;
+    background-color: var(--primecolor);
+}
+
+.page1 {
+    padding-top: 5vw;
+    box-sizing: border-box;
+    padding: 0 4vw;
+    /*  */
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    gap: 0 6vw;
+    padding-top: 5vw;
+    /* border: 2px solid red; */
+    /* min-height: calc(100vh - 7vmax); */
+}
+
+.page1 .div {
+    background-color: #CA1B42;
+}
+
+.page1 h1,
+h4 {
+    font-weight: 400;
+}
+
+.page1 .bold{
+    font-weight: 800;
+}
+
+.page1 button {
+    border: none;
+    height: 4vmax;
+    width: 9vmax;
+    border-radius: 5px;
+    font-size: 0.7em;
+    font-weight:bolder;
+    color: var(--fontcolor);
+    background-color: var(--primecolor);
+}
+
+.page1 p {
+    max-width: 48vw;
+    padding: 3vw 0;
+}
+
+button.white {
+    background-color: white;
+}
+
+.white a{
+    color: black;
+} 
+
+/*projects */
+
+.project {
+    padding: 4vw;
+}
+
+.project h4 {
+    color: var(--primecolor);
+}
+
+.project .line {
+    border-bottom: 4px solid var(--primecolor);
+    width: 15vmax;
+    height: 0.2vw;
+}
+
+.project h2 {
+    font-size: 1.8em;
+}
+
+/* card */
+
+.cards{
+    padding: 3vw 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    width: 100%;
+    justify-content: center;
+}
+
+iframe{
+    width: 39vmax;
+    height: 22vmax;
+}
+
+.cards .size{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 39vmax;
+    height: 22vmax;
+    background-color: #0069bd;
+}
+
+.cards i{
+    font-size: 1.95cm;
+    color: #FF0000;
+}
+
+.cards .instagram{
+    color: #D50DE2;
+}
+
+.cards .one{
+background-image: url(assets/deadpool.jpg);
+background-size: cover;
+}
+
+.cards .two{
+    background-image: url(assets/hanuman.jpg);
+    background-size: cover;
+    
+}
+
+.cards .three{
+    background-image: url(assets/instagame.png);
+    background-size: cover;
+
+}
+/* 2 tech stack */
+
+
+/* 4 contact */
+
+/* responsive */
+
+@media (max-width: 466px) {
+    .page1 .line{
+        display: flex;
+    }
+}
+
+@media (min-width: 850px) {
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    .project .card .image {
+        height: 23vmax;
+        width: 40vmax;
+    }
+    
+    .project .image img {
+        height: 20vw;
+    }
+    
+    .project .card .name {
+        height: 5.5vw;
+    }
+}
+
+@media (min-width: 1400px) {
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .project .card .image {
+        height: 14vmax;
+        width: 24vmax;
+    }
+    
+    .project .image img {
+        height: 12vmax;
+    }
+    
+    .project .card .name {
+        height: 3.5vw;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    /* nav bar  */
+    .nav {
+        padding: 1.5vmax 5vmax;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .navbox i {
+        display: block;
+    }
+
+    .page1 p {
+        min-width: 90vw;
+    }
+
+    .font {
+        padding-top: 5vw;
+    }
+}
